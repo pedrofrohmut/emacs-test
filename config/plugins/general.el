@@ -7,7 +7,7 @@
 
 (general-nmap
   :prefix "SPC"
-  "SPC" '(counsel-M-x :which-key "M-x")
+  "SPC" '(execute-extended-command :which-key "M-x")
   ;; Buffers
   "b"   '(:igonre t :which-key "Buffers")
   "b b" '(ibuffer :which-key "IBuffer")
@@ -18,8 +18,8 @@
   "b e" '(eval-buffer :which-key "Eval Buffer")
   ;; Files
   "f"   '(:ignore t :which-key "Files")
-  "f f" '(counsel-find-file :which-key "Find File")
-  "f d" '(counsel-dired :which-key "DirEd")
+  "f f" '(find-file :which-key "Find File")
+  "f d" '(dired :which-key "DirEd")
   "f s" '(save-buffer :which-key "Save Buffer")
   ;; Projectile
   ;; "p"   '(projectile-command-map :which-key "Projectile Commands")
@@ -47,5 +47,5 @@
   "w j" '(evil-window-down :which-key "Go Down")
   "w k" '(evil-window-up :which-key "Go Up")
   "w l" '(evil-window-right :which-key "Go Right")
-  "w r" '(evil-window-rotate-downwards :which-key "Rotate")
+  "w r" '(evil-window-exchange :which-key "Rotate")
   "w o" '(delete-other-windows :which-key "Close Others"))

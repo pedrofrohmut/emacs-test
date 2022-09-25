@@ -1,3 +1,5 @@
 auto-save-list/
 elpa/
 transient/
+custom-vars.el
+places

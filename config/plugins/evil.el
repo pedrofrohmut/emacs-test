@@ -14,7 +14,8 @@
   (setq evil-cross-lines t)
   (setq evil-move-beyond-eol t)
   :config
-  (evil-mode t))
+  (evil-mode t)
+  (evil-set-undo-system 'undo-redo))
 
 ;; Evil - Must Have #############################################################
 
@@ -54,14 +55,15 @@
 ;; Evil Lion Align stuff by stuff gl= gL, gl; gL( 
 (use-package evil-lion
   :ensure t
+  :after evil
   :config
   (evil-lion-mode))
 
 ;; Evil Unbind ##################################################################
 (define-key evil-normal-state-map (kbd "C-p") nil)
 (define-key evil-normal-state-map (kbd "C-n") nil)
-(define-key evil-insert-state-map (kbd "C-p") nil)
-(define-key evil-insert-state-map (kbd "C-n") nil)
+;; (define-key evil-insert-state-map (kbd "C-p") nil)
+;; (define-key evil-insert-state-map (kbd "C-n") nil)
 (define-key evil-normal-state-map (kbd "s") nil)
 (define-key evil-normal-state-map (kbd "S") nil)
 

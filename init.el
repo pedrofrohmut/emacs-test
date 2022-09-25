@@ -1,10 +1,3 @@
-(tool-bar-mode 0)
-(menu-bar-mode 0)
-(scroll-bar-mode 0)
-(setq inhibit-startup-message t)
-
-(add-to-list 'default-frame-alist '(font . "FiraCode Nerd Font Mono 12"))
-
 (setq-default indent-tabs-mode nil)
 
 (global-display-line-numbers-mode t)
@@ -12,15 +5,31 @@
 
 (electric-pair-mode t)
 
+(save-place-mode t)
+
 (setq make-backup-files nil)
 
 (setq column-number-mode t)
+
+(setq use-dialog-box nil)
+
+(setq global-auto-revert-non-file-buffers t)
+(global-auto-revert-mode t)
 
 ;; Tabs
 (setq tab-bar-new-tab-choice "*scratch*")
 (setq tab-bar-new-tab-to 'rightmost)
 (setq tab-bar-close-button-show nil)
 (setq tab-bar-new-button-show nil)
+
+;; Apperance ###################################################################
+
+(tool-bar-mode 0)
+(menu-bar-mode 0)
+(scroll-bar-mode 0)
+(setq inhibit-startup-message t)
+
+(add-to-list 'default-frame-alist '(font . "FiraCode Nerd Font Mono 12"))
 
 ;; Transparency ################################################################
 
@@ -36,13 +45,25 @@
 (set-frame-parameter (selected-frame) 'alpha '(90 . 90))
 (add-to-list 'default-frame-alist '(alpha . (90 . 90)))
 
+;; Keybinds #####################################################################
+
+
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit) ;; Make ESC quit prompts
+(global-set-key (kbd "C-c d")    'cd) ;; Change default directory
+(global-set-key (kbd "C-c C-d")  'cd) ;; Change default directory
+
+(global-unset-key (kbd "C-h"))  ;; Can still use help with F1
+(global-unset-key (kbd "C-l"))  ;; Can use evil zz
+(global-unset-key (kbd "C-j"))  ;; Not useful before
+(global-unset-key (kbd "C-k"))  ;; Not useful either
+
 ;; MELPA ########################################################################
 
 ;; Adding packages
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 (add-to-list 'package-archives '("elpa" . "https://elpa.gnu.org/packages/") t)
+;(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 (package-initialize)
 
 ;; USE-PACKAGE ##################################################################
@@ -58,19 +79,10 @@
   ;(setq use-package-always-ensure t)
   (require 'use-package))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(visual-fill-column ace-jump-mode evil-numbers evil-surround evil-commentary evil-collection evil doom-themes use-package)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;; Custom File ##################################################################
+
+(setq custom-file "~/.config/emacs/custom-vars.el")
+(load custom-file 'noerror 'nomessage)
 
 ;; Plugin Files #################################################################
 
@@ -91,3 +103,6 @@
 
 ;; Fill Column
 (load "~/.config/emacs/config/plugins/visual-fill-column.el")
+
+;; Buffer Completion - Vertico
+(load "~/.config/emacs/config/plugins/buffer-completion.el")
