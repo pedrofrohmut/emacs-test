@@ -22,31 +22,7 @@
 (setq tab-bar-close-button-show nil)
 (setq tab-bar-new-button-show nil)
 
-;; Apperance ###################################################################
-
-(tool-bar-mode 0)
-(menu-bar-mode 0)
-(scroll-bar-mode 0)
-(setq inhibit-startup-message t)
-
-(add-to-list 'default-frame-alist '(font . "FiraCode Nerd Font Mono 12"))
-
-;; Transparency ################################################################
-
-(defun set-background-for-terminal (&optional frame)
-  (or frame (setq frame (selected-frame)))
-  "unsets the background color in terminal mode"
-  (unless (display-graphic-p frame)
-    (set-face-background 'default "unspecified-bg" frame)))
-
-(add-hook 'after-make-frame-functions 'set-background-for-terminal)
-(add-hook 'window-setup-hook 'set-background-for-terminal)
-
-(set-frame-parameter (selected-frame) 'alpha '(90 . 90))
-(add-to-list 'default-frame-alist '(alpha . (90 . 90)))
-
 ;; Keybinds #####################################################################
-
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit) ;; Make ESC quit prompts
 (global-set-key (kbd "C-c d")    'cd) ;; Change default directory
@@ -87,7 +63,7 @@
 ;; Plugin Files #################################################################
 
 ;; Doom theme
-(load "~/.config/emacs/config/plugins/doom.el")
+(load "~/.config/emacs/config/plugins/colors.el")
 
 ;; Evil
 (load "~/.config/emacs/config/plugins/evil.el")
@@ -106,3 +82,6 @@
 
 ;; Buffer Completion - Vertico
 (load "~/.config/emacs/config/plugins/buffer-completion.el")
+
+;; Auto Complete - Company
+(load "~/.config/emacs/config/plugins/auto-complete.el")

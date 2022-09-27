@@ -86,21 +86,11 @@
     (interactive)
     (evil-scroll-line-down 12)))
 
-(define-key evil-normal-state-map (kbd "C-d")
-  (lambda ()
-    (interactive)
-    (evil-scroll-line-down 25)))
-
 ;; Scroll up
 (define-key evil-normal-state-map (kbd "C-k")
   (lambda ()
     (interactive)
     (evil-scroll-line-up 12)))
-
-(define-key evil-normal-state-map (kbd "C-u")
-  (lambda ()
-    (interactive)
-    (evil-scroll-line-up 25)))
 
 ;; Resize Windows
 (define-key evil-normal-state-map (kbd "<up>") 'evil-window-increase-height)

@@ -3,4 +3,7 @@
 (use-package doom-themes
   :ensure t
   :config
-  (load-theme 'doom-tokyo-night t))
+  (load-theme 'doom-monokai-pro t))
+
+(set-background-color "#1a1b26")
+(set-face-foreground 'line-number "#666666")
