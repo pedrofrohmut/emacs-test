@@ -84,9 +84,6 @@
 
 ;; Plugin Files #################################################################
 
-;; Language Support
-(load "~/.config/emacs/config/language-support.el")
-
 ;; Doom theme
 (load "~/.config/emacs/config/colors.el")
 
@@ -110,6 +107,12 @@
 
 ;; Auto Complete - Company
 (load "~/.config/emacs/config/auto-complete.el")
+
+;; Language Support
+(load "~/.config/emacs/config/language-support.el")
+
+;; Language Server Protocol Client
+(load "~/.config/emacs/config/lsp.el")
 
 ;; Startup Function #############################################################
 
