@@ -1,8 +1,9 @@
 ;; Auto Complete ###############################################################
 
-(use-package company :ensure t)
-
-(add-hook 'after-init-hook 'global-company-mode)
+(use-package company
+  :ensure t
+  :init
+  (add-hook 'after-init-hook 'global-company-mode))
 
 ; No delay in showing suggestions.
 (setq company-idle-delay 0)

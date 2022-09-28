@@ -3,7 +3,9 @@
 (use-package which-key
   :ensure t
   :init
-  (setq which-key-idle-delay 1)
+  (add-hook 'after-init-hook 'which-key-mode)
   :config
-  (which-key-mode t)
-  (which-key-setup-side-window-right))
+  (setq which-key-idle-delay 1))
+
+;(which-key-setup-side-window-right)
+

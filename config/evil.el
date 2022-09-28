@@ -13,9 +13,11 @@
   (setq evil-split-window-below t)
   (setq evil-cross-lines t)
   (setq evil-move-beyond-eol t)
+  (add-hook 'after-init-hook 'evil-mode)
   :config
-  (evil-mode t)
+  ;; (evil-mode t)
   (evil-set-undo-system 'undo-redo))
+
 
 ;; Evil - Must Have #############################################################
 
@@ -23,6 +25,7 @@
 (use-package evil-collection
   :ensure t
   :after evil
+  :diminish evil-collection-unimpaired-mode
   :config
   (evil-collection-init))
 
@@ -30,6 +33,7 @@
 (use-package evil-commentary
   :ensure t
   :after evil
+  :diminish evil-commentary-mode
   :config
   (evil-commentary-mode t))
 
@@ -49,6 +53,7 @@
 (use-package evil-goggles
   :ensure t
   :after evil
+  :diminish evil-goggles-mode
   :config
   (evil-goggles-mode t))
 
@@ -62,8 +67,6 @@
 ;; Evil Unbind ##################################################################
 (define-key evil-normal-state-map (kbd "C-p") nil)
 (define-key evil-normal-state-map (kbd "C-n") nil)
-;; (define-key evil-insert-state-map (kbd "C-p") nil)
-;; (define-key evil-insert-state-map (kbd "C-n") nil)
 (define-key evil-normal-state-map (kbd "s") nil)
 (define-key evil-normal-state-map (kbd "S") nil)
 
