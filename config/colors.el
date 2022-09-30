@@ -6,4 +6,4 @@
   (load-theme 'doom-monokai-pro t))
 
 (set-background-color "#1a1b26")
-(set-face-foreground 'line-number "#666666")
+(set-face-foreground 'line-number "#a3a3a3")

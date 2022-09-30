@@ -29,17 +29,6 @@
 (setq tab-bar-close-button-show nil)
 (setq tab-bar-new-button-show nil)
 
-;; Keybinds #####################################################################
-
-(global-set-key (kbd "<escape>") 'keyboard-escape-quit) ;; Make ESC quit prompts
-(global-set-key (kbd "C-c d")    'cd) ;; Change default directory
-(global-set-key (kbd "C-c C-d")  'cd) ;; Change default directory
-
-(global-unset-key (kbd "C-h"))  ;; Can still use help with F1
-(global-unset-key (kbd "C-l"))  ;; Can use evil zz
-(global-unset-key (kbd "C-j"))  ;; Not useful before
-(global-unset-key (kbd "C-k"))  ;; Not useful either
-
 ;; Melpa ########################################################################
 
 ;; Adding packages
@@ -114,6 +103,20 @@
 ;; Language Server Protocol Client
 (load "~/.config/emacs/config/lsp.el")
 
+;; Keybinds #####################################################################
+
+(global-unset-key (kbd "C-h"))  ;; Can still use help with F1
+(global-unset-key (kbd "C-l"))  ;; Can use evil zz
+(global-unset-key (kbd "C-j"))  ;; Not useful before
+(global-unset-key (kbd "C-k"))  ;; Not useful either
+
+
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit) ;; Make ESC quit prompts
+(global-set-key (kbd "C-c d")    'cd) ;; Change default directory
+(global-set-key (kbd "C-c C-d")  'cd) ;; Change default directory
+
+(define-key evil-normal-state-map (kbd "C-q") 'project-find-file)
+
 ;; Startup Function #############################################################
 
 (defun my/display-startup-time ()
@@ -127,3 +130,4 @@
 
 (add-hook 'emacs-startup-hook #'my/display-startup-time)
 (add-hook 'emacs-startup-hook #'my/restore-gc-threshhold)
+

@@ -2,6 +2,9 @@
 
 (use-package company
   :ensure t
+  :bind (:map company-active-map
+              ("<tab>" . company-complete-selection)
+              ("C-e" . company-abort))
   :init
   (add-hook 'after-init-hook 'global-company-mode))
 
