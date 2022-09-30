@@ -50,7 +50,7 @@
   (add-to-list 'load-path "~/.config/emacs/elpa")
   ;(setq use-package-always-ensure t)
   ;(setq use-package-always-defer t)
-  ;(setq use-package-verbose t)
+  (setq use-package-verbose t)
   (require 'use-package))
 
 
@@ -73,8 +73,8 @@
 
 ;; Plugin Files #################################################################
 
-;; Doom theme
-(load "~/.config/emacs/config/colors.el")
+;; Doom theme and Modeline
+(load "~/.config/emacs/config/styling.el")
 
 ;; Evil
 (load "~/.config/emacs/config/evil.el")
@@ -95,13 +95,16 @@
 (load "~/.config/emacs/config/buffer-completion.el")
 
 ;; Auto Complete - Company
-(load "~/.config/emacs/config/auto-complete.el")
+(load "~/.config/emacs/config/company.el")
 
 ;; Language Support
 (load "~/.config/emacs/config/language-support.el")
 
 ;; Language Server Protocol Client
 (load "~/.config/emacs/config/lsp.el")
+
+;; Shells and Terms
+(load "~/.config/emacs/config/terminals.el")
 
 ;; Keybinds #####################################################################
 
@@ -130,4 +133,3 @@
 
 (add-hook 'emacs-startup-hook #'my/display-startup-time)
 (add-hook 'emacs-startup-hook #'my/restore-gc-threshhold)
-

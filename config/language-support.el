@@ -2,15 +2,19 @@
 
 ;; CSharp #################################################################
 (use-package tree-sitter
-  :ensure t)
+  :defer t
+  :ensure nil)
 
 (use-package tree-sitter-langs
-  :ensure t)
+  :defer t
+  :ensure nil)
 
 (use-package tree-sitter-indent
-  :ensure t)
+  :defer t
+  :ensure nil)
 
 (use-package csharp-mode
+  :defer t
   :ensure t
   :mode "\\.cs\\'")
   ;; :config

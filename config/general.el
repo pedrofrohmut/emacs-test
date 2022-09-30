@@ -17,7 +17,7 @@
     "b e" '(eval-buffer :which-key "Eval Buffer")
     ;; Files
     "f"   '(:ignore t :which-key "Files")
-    "f f" '(find-file :which-key "Find File")
+    "f f" '(project-find-file :which-key "Find File")
     "f d" '(dired :which-key "DirEd")
     "f s" '(save-buffer :which-key "Save Buffer")
     ;; Projectile
