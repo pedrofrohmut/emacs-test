@@ -13,6 +13,10 @@
 
 (setq auto-save-default nil)
 
+;; Color Column/Ruler
+(global-display-fill-column-indicator-mode t)
+(setq-default display-fill-column-indicator-column 101)
+
 ;; Show cursor position in statusbar
 (setq column-number-mode t)
 
@@ -52,7 +56,6 @@
   ;(setq use-package-always-defer t)
   (setq use-package-verbose t)
   (require 'use-package))
-
 
 ;; No Littering #################################################################
 

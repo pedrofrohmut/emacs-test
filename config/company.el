@@ -3,7 +3,7 @@
 (use-package company
   :ensure t
   :bind (:map company-active-map
-              ("<tab>" . company-complete-selection)
+              ;; ("<tab>" . company-complete-selection)
               ("C-e" . company-abort))
   :init
   (add-hook 'after-init-hook 'global-company-mode))
@@ -16,3 +16,11 @@
 
 ; Goes to top of comp list when reaches the end
 (setq company-selection-wrap-around t)
+
+(use-package company-box
+  :ensure t
+  :hook (company-mode . company-box-mode))
+
+(use-package company-quickhelp
+  :ensure t
+  :hook (company-mode . company-quickhelp-mode))
