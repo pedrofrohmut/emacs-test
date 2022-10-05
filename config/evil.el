@@ -1,38 +1,18 @@
 ;; Evil #########################################################################
 
-;; Evil Mode
-;; (use-package evil
-;;   :ensure t
-;;   :init
-;;   (setq evil-want-C-u-scroll t)
-;;   (setq evil-want-C-u-delete t)
-;;   (setq evil-want-C-i-jump t)
-;;   (setq evil-want-keybinding nil) ; Evil collection asks for it
-;;   (setq evil-want-Y-yank-to-eol t)
-;;   (setq evil-vsplit-window-right t)
-;;   (setq evil-split-window-below t)
-;;   (setq evil-cross-lines t)
-;;   (setq evil-move-beyond-eol t)
-;;   ;; (add-hook 'after-init-hook 'evil-mode)
-;;   :config
-;;   (evil-mode t)
-;;   (evil-set-undo-system 'undo-redo))
-
 (setq evil-want-C-u-scroll t)
 (setq evil-want-C-u-delete t)
 (setq evil-want-C-i-jump t)
-(setq evil-want-keybinding nil) ; Evil collection asks for it
 (setq evil-want-Y-yank-to-eol t)
 (setq evil-vsplit-window-right t)
 (setq evil-split-window-below t)
 (setq evil-cross-lines t)
 (setq evil-move-beyond-eol t)
-
-(setq evil-set-undo-system 'undo-redo)
+(setq evil-undo-system 'undo-redo)
+(setq evil-want-keybinding nil) ; Evil collection asks for it
 
 (require 'evil)
 (add-hook 'after-init-hook 'evil-mode)
-;; (evil-mode t)
 
 ;; Evil Unbind ##################################################################
 (define-key evil-normal-state-map (kbd "C-p") nil)
@@ -75,31 +55,25 @@
 
 ;; Evil - Must Have #############################################################
 
-;; Makes evil keys consistent in more places than just evil mode default
-(use-package evil-collection
-  :ensure t
-  :after evil
-  :config
-  (evil-collection-init))
+;; ;; Makes evil keys consistent in more places than just evil mode default
+(with-eval-after-load 'evil
+  (require 'evil-collection)
+  (evil-collection-init)
+  (message "evil-collection loaded"))
 
 ;; Evil Commentary gcc gc<object>
-(use-package evil-commentary
-  :ensure t
-  :after evil
-  :config
+(with-eval-after-load 'evil
+  (require 'evil-commentary)
   (evil-commentary-mode t))
 
 ;; Evil Surround (emulate tim pope)
-(use-package evil-surround
-  :ensure t
-  :after evil
-  :config
+(with-eval-after-load 'evil
+  (require 'evil-surround)
   (global-evil-surround-mode t))
 
 ;; Evil-numbers
-(use-package evil-numbers
-  :ensure t
-  :after evil)
+(with-eval-after-load 'evil
+  (require 'evil-numbers))
 
 ;; Evil Increase hovered number
 (define-key evil-normal-state-map (kbd "C--") 'evil-numbers/dec-at-pt)
@@ -107,15 +81,11 @@
 (define-key evil-normal-state-map (kbd "C-=") 'evil-numbers/inc-at-pt)
 
 ;; Evil Goggles displays a visual hint when editing
-(use-package evil-goggles
-  :ensure t
-  :after evil
-  :config
+(with-eval-after-load 'evil
+  (require 'evil-goggles)
   (evil-goggles-mode t))
 
 ;; Evil Lion Align stuff by stuff gl= gL, gl; gL(
-(use-package evil-lion
-  :ensure t
-  :after evil
-  :config
-  (evil-lion-mode))
+(with-eval-after-load 'evil
+  (require 'evil-lion)
+  (evil-lion-mode t))

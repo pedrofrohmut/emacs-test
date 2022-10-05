@@ -21,7 +21,6 @@
     "f d" '(dired :which-key "DirEd")
     "f s" '(save-buffer :which-key "Save Buffer")
     ;; Projectile
-    ;; "p"   '(projectile-command-map :which-key "Projectile Commands")
     "p d" '(package-delete :which-key "Package Delete")
     ;; Utils
     "s"   '(:ignore t :which-key "Utils")
