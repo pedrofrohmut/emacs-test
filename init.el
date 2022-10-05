@@ -54,7 +54,7 @@
   (add-to-list 'load-path "~/.config/emacs/elpa")
   ;(setq use-package-always-ensure t)
   ;(setq use-package-always-defer t)
-  (setq use-package-verbose t)
+  ;(setq use-package-verbose t)
   (require 'use-package))
 
 ;; No Littering #################################################################
@@ -120,6 +120,12 @@
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit) ;; Make ESC quit prompts
 (global-set-key (kbd "C-c d")    'cd) ;; Change default directory
 (global-set-key (kbd "C-c C-d")  'cd) ;; Change default directory
+
+;; DirEd Keys
+(define-key dired-mode-map (kbd "C-c n f") 'dired-create-empty-file)
+(define-key dired-mode-map (kbd "C-c n d") 'dired-create-directory)
+(evil-define-key 'normal dired-mode-map (kbd "n f") 'dired-create-empty-file)
+(evil-define-key 'normal dired-mode-map (kbd "n d") 'dired-create-directory)
 
 (define-key evil-normal-state-map (kbd "C-q") 'project-find-file)
 
