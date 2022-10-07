@@ -1,6 +1,6 @@
 ;; Language Support
 
-;; CSharp #################################################################
+;; CSharp ######################################################################
 
 (use-package tree-sitter
   :defer t
@@ -21,9 +21,16 @@
   ;; :config
   ;; (add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-tree-sitter-mode)))
 
-;; Elixir #################################################################
+;; Elixir ######################################################################
 
 (unless (package-installed-p 'elixir-mode)
   (package-install 'elixir-mode))
 
 (require 'elixir-mode)
+
+;; Haskell #####################################################################
+
+(unless (package-installed-p 'haskell-mode)
+  (package-install 'haskell-mode))
+
+(require 'haskell-mode)
