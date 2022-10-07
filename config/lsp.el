@@ -2,6 +2,8 @@
 
 (use-package lsp-mode
   :ensure t
+  :init
+  (add-to-list 'exec-path "~/software/elixir-ls/")
   :commands lsp)
 
 ;; GoTo
@@ -30,6 +32,7 @@
 
 ;; Hooks
 (add-hook 'csharp-mode-hook 'lsp)
+(add-hook 'elixir-mode-hook 'lsp)
 (add-hook 'lsp-mode         'lsp-enable-which-key-integration)
 
 

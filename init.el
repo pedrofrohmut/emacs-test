@@ -59,11 +59,8 @@
 
 ;; No Littering #################################################################
 
-;; REPO: https://github.com/emacscollective/no-littering
-
 ;; Helps to organize the emacs configuration directory
-(use-package no-littering
-  :ensure t)
+(use-package no-littering :ensure t)
 
 ;; no-littering does not set it by default
 (setq auto-save-file-name-transforms
@@ -116,10 +113,7 @@
 (global-unset-key (kbd "C-j"))  ;; Not useful before
 (global-unset-key (kbd "C-k"))  ;; Not useful either
 
-
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit) ;; Make ESC quit prompts
-(global-set-key (kbd "C-c d")    'cd) ;; Change default directory
-(global-set-key (kbd "C-c C-d")  'cd) ;; Change default directory
 
 ;; DirEd Keys
 (define-key dired-mode-map (kbd "C-c n f") 'dired-create-empty-file)
