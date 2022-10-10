@@ -7,8 +7,8 @@
 
 (define-key evil-normal-state-map (kbd "SPC t t") 'vterm)
 
-(use-package vterm-toggle
-  :ensure t
-  :defer t
-  :bind ("C-'" . vterm-toggle)
-  :commands vterm-toggle)
+;; (use-package vterm-toggle
+;;   :ensure t
+;;   :defer t
+;;   :bind ("C-'" . vterm-toggle)
+;;   :commands vterm-toggle)

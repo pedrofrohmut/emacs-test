@@ -12,4 +12,6 @@
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
+(set-fringe-mode 12) ;; Adds side padding to frames
+
 (setq inhibit-startup-message t)

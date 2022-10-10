@@ -3,8 +3,9 @@
 (use-package company
   :ensure t
   :bind (:map company-active-map
-              ;; ("<tab>" . company-complete-selection)
-              ("C-e" . company-abort))
+              ("C-e" . company-abort)
+              ("C-j" . yas-expand)
+              ("C-k" . nil))
   :init
   (add-hook 'after-init-hook 'global-company-mode))
 
@@ -19,8 +20,10 @@
 
 (use-package company-box
   :ensure t
+  :defer t
   :hook (company-mode . company-box-mode))
 
 (use-package company-quickhelp
   :ensure t
+  :defer t
   :hook (company-mode . company-quickhelp-mode))

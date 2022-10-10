@@ -1,8 +1,8 @@
 ;; Insert spaces  instead of tabs (no \t)
 (setq-default indent-tabs-mode nil)
 
-(global-display-line-numbers-mode t)
-(setq-default display-line-numbers-type 'relative)
+;; (global-display-line-numbers-mode t)
+;; (setq-default display-line-numbers-type 'relative)
 
 (electric-pair-mode t)
 
@@ -88,6 +88,9 @@
 ;; Ace Jump
 (load "~/.config/emacs/config/ace-jump.el")
 
+;; Tree File Explorer
+(load "~/.config/emacs/config/tree-file-explorer.el")
+
 ;; Fill Column
 (load "~/.config/emacs/config/visual-fill-column.el")
 
@@ -95,7 +98,10 @@
 (load "~/.config/emacs/config/buffer-completion.el")
 
 ;; Auto Complete - Company
-(load "~/.config/emacs/config/company.el")
+(load "~/.config/emacs/config/completion.el")
+
+;; Snippets
+(load "~/.config/emacs/config/snippets.el")
 
 ;; Language Support
 (load "~/.config/emacs/config/language-support.el")
@@ -121,6 +127,7 @@
 (evil-define-key 'normal dired-mode-map (kbd "n f") 'dired-create-empty-file)
 (evil-define-key 'normal dired-mode-map (kbd "n d") 'dired-create-directory)
 
+;; Project 
 (define-key evil-normal-state-map (kbd "C-q") 'project-find-file)
 
 ;; Startup Function #############################################################
