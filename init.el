@@ -130,6 +130,10 @@
 ;; Project 
 (define-key evil-normal-state-map (kbd "C-q") 'project-find-file)
 
+;; Minibuffer
+(define-key minibuffer-mode-map (kbd "C-w") 'backward-kill-word)
+(define-key minibuffer-mode-map (kbd "C-u") 'backward-kill-sentence)
+
 ;; Startup Function #############################################################
 
 (defun my/display-startup-time ()
