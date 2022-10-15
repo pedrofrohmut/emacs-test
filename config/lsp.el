@@ -28,7 +28,7 @@
 ;; (setq lsp-ui-doc-show-with-cursor t)        ;; Show docs on cursor hover
 ;; (setq lsp-ui-doc-show-with-mouse nil)       ;; Show docs on mouse hover
 (setq lsp-lens-enable nil)                  ;; Code lens
-(setq lsp-headerline-breadcrumb-enable t) ;; Breadcrumb
+(setq lsp-headerline-breadcrumb-enable nil)   ;; Breadcrumb
 
 ;; Hooks
 (add-hook 'csharp-mode-hook 'lsp)

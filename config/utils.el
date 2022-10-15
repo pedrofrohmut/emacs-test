@@ -8,3 +8,9 @@
   (setq-default visual-fill-column-width 121)
   (setq-default visual-fill-column-center-text t))
 
+;; Restart Emacs ################################################################
+
+(use-package restart-emacs
+  :ensure t
+  :commands restart-emacs)
+

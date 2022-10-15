@@ -91,8 +91,8 @@
 ;; Tree File Explorer
 (load "~/.config/emacs/config/tree-file-explorer.el")
 
-;; Fill Column
-(load "~/.config/emacs/config/visual-fill-column.el")
+;; Utils: Visual Fill Column, Restart Emacs
+(load "~/.config/emacs/config/utils.el")
 
 ;; Buffer Completion - Vertico
 (load "~/.config/emacs/config/buffer-completion.el")
@@ -127,7 +127,7 @@
 (evil-define-key 'normal dired-mode-map (kbd "n f") 'dired-create-empty-file)
 (evil-define-key 'normal dired-mode-map (kbd "n d") 'dired-create-directory)
 
-;; Project 
+;; Project
 (define-key evil-normal-state-map (kbd "C-q") 'project-find-file)
 
 ;; Minibuffer
