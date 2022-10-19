@@ -27,6 +27,7 @@
     "u s"   '(replace-regexp :which-key "Replace Reg Exp")
     "u 1"   '(delete-trailing-whitespace :which-key "Del Trailing")
     "u r e" '(restart-emacs :which-key "Restart Emacs")
+    "u r l" '(lsp-restart-workspace :which-key "LSP Restart Workspace")
     ;; Tabs
     "t"     '(:ignore t :which-key "Tabs")
     "t l"   '(tab-move :which-key "Go Next")

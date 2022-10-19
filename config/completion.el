@@ -18,12 +18,12 @@
 ; Goes to top of comp list when reaches the end
 (setq company-selection-wrap-around t)
 
-(use-package company-box
-  :ensure t
-  :defer t
-  :hook (company-mode . company-box-mode))
+;; (use-package company-box
+;;   :ensure t
+;;   :defer t
+;;   :hook (company-mode . company-box-mode))
 
-(use-package company-quickhelp
-  :ensure t
-  :defer t
-  :hook (company-mode . company-quickhelp-mode))
+;; (use-package company-quickhelp
+;;   :ensure t
+;;   :defer t
+;;   :hook (company-mode . company-quickhelp-mode))

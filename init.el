@@ -1,9 +1,13 @@
 ;; Insert spaces  instead of tabs (no \t)
 (setq-default indent-tabs-mode nil)
+;; (setq-default tab-width 4)
+;; (setq-default tab-stop-list (number-sequence 4 200 4))
+;; (setq indent-line-function 'insert-tab)
 
 ;; (global-display-line-numbers-mode t)
 ;; (setq-default display-line-numbers-type 'relative)
 
+;; Insert closing character like ) } ]
 (electric-pair-mode t)
 
 ;; Saves your location in files for the next time you open it
@@ -129,6 +133,10 @@
 
 ;; Project
 (define-key evil-normal-state-map (kbd "C-q") 'project-find-file)
+
+;; Buffers
+(define-key evil-normal-state-map (kbd "M-p") 'previous-buffer)
+(define-key evil-normal-state-map (kbd "M-n") 'next-buffer)
 
 ;; Minibuffer
 (define-key minibuffer-mode-map (kbd "C-w") 'backward-kill-word)

@@ -81,9 +81,9 @@
 (define-key evil-normal-state-map (kbd "C-=") 'evil-numbers/inc-at-pt)
 
 ;; Evil Goggles displays a visual hint when editing
-(with-eval-after-load 'evil
-  (require 'evil-goggles)
-  (evil-goggles-mode t))
+;; (with-eval-after-load 'evil
+;;   (require 'evil-goggles)
+;;   (evil-goggles-mode t))
 
 ;; Evil Lion Align stuff by stuff gl= gL, gl; gL(
 (with-eval-after-load 'evil

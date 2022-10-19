@@ -17,9 +17,9 @@
 (define-key evil-normal-state-map (kbd "SPC c a") 'lsp-execute-code-action)
 (define-key evil-normal-state-map (kbd "SPC r n") 'lsp-rename)
 
-(use-package lsp-ui
-  :ensure t
-  :commands lsp-ui-mode)
+;; (use-package lsp-ui
+;;   :ensure t
+;;   :commands lsp-ui-mode)
 
 (setq lsp-keymap-prefix "C-c l")
 
