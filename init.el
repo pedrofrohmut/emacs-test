@@ -111,7 +111,7 @@
 (load "~/.config/emacs/config/language-support.el")
 
 ;; Language Server Protocol Client
-(load "~/.config/emacs/config/lsp.el")
+(load "~/.config/emacs/config/lsp-mode.el")
 
 ;; Shells and Terms
 (load "~/.config/emacs/config/terminals.el")
@@ -153,5 +153,8 @@
 (defun my/restore-gc-threshhold ()
   (setq gc-cons-threshold '1600000))
 
+;; Hooks ########################################################################
+
 (add-hook 'emacs-startup-hook #'my/display-startup-time)
 (add-hook 'emacs-startup-hook #'my/restore-gc-threshhold)
+(add-hook 'write-file-hooks    'delete-trailing-whitespace)
