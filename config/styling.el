@@ -12,3 +12,6 @@
   :ensure t
   :config
   (doom-modeline-mode t))
+
+(use-package all-the-icons
+  :ensure t)
