@@ -92,6 +92,9 @@
 ;; Ace Jump
 (load "~/.config/emacs/config/ace-jump.el")
 
+;; Projectile
+(load "~/.config/emacs/config/projectile.el")
+
 ;; Tree File Explorer
 (load "~/.config/emacs/config/tree-file-explorer.el")
 
