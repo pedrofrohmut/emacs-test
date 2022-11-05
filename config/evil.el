@@ -22,6 +22,9 @@
 (define-key evil-normal-state-map (kbd "s")   nil)
 (define-key evil-normal-state-map (kbd "S")   nil)
 
+;; Redo
+(define-key evil-normal-state-map (kbd "U") 'evil-redo)
+
 ;; Easy insert linebreak in normal mode
 (define-key evil-normal-state-map (kbd "RET") (kbd "i RET <escape>"))
 
