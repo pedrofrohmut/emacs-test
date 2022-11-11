@@ -1,9 +1,7 @@
 ;; Insert spaces  instead of tabs (no \t)
 (setq-default indent-tabs-mode nil)
-;; (setq-default tab-width 4)
-;; (setq-default tab-stop-list (number-sequence 4 200 4))
-;; (setq indent-line-function 'insert-tab)
 
+;; Line Numbers
 ;; (global-display-line-numbers-mode t)
 ;; (setq-default display-line-numbers-type 'relative)
 
@@ -13,11 +11,12 @@
 ;; Saves your location in files for the next time you open it
 (save-place-mode t)
 
+;; Files
 (setq make-backup-files nil)
-
 (setq auto-save-default nil)
 
-;; Color Column/Ruler
+;; Fill Column (Ruler)
+(setq-default fill-column 121)
 (global-display-fill-column-indicator-mode t)
 (setq-default display-fill-column-indicator-column 101)
 
@@ -37,9 +36,8 @@
 (setq tab-bar-close-button-show nil)
 (setq tab-bar-new-button-show nil)
 
-;; Melpa ########################################################################
+;; Packages #####################################################################
 
-;; Adding packages
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives '("elpa" . "https://elpa.gnu.org/packages/") t)
