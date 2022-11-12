@@ -114,6 +114,9 @@
 ;; Language Server Protocol Client
 (load "~/.config/emacs/config/lsp-mode.el")
 
+;; Debug
+(load "~/.config/emacs/config/debug.el")
+
 ;; Shells and Terms
 (load "~/.config/emacs/config/terminals.el")
 

@@ -16,7 +16,10 @@
 
 (use-package csharp-mode
   :defer t
-  :ensure t)
+  :ensure t
+  :config
+  (require 'dap-netcore))
+
   ;; :mode "\\.cs\\'")
   ;; :config
   ;; (add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-tree-sitter-mode)))
