@@ -146,6 +146,9 @@
 (define-key minibuffer-mode-map (kbd "C-w") 'backward-kill-word)
 (define-key minibuffer-mode-map (kbd "C-u") 'backward-kill-sentence)
 
+;; Shell Command
+(define-key evil-normal-state-map (kbd "M-1") 'shell-command)
+
 ;; Startup Function #############################################################
 
 (defun my/display-startup-time ()

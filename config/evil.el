@@ -9,6 +9,7 @@
 (setq evil-cross-lines t)
 (setq evil-move-beyond-eol t)
 (setq evil-undo-system 'undo-redo)
+(setq evil-want-fine-undo t)
 (setq evil-want-keybinding nil) ; Evil collection asks for it
 
 (require 'evil)
