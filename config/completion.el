@@ -5,6 +5,8 @@
   :bind (:map company-active-map
               ("C-e" . company-abort)
               ("C-j" . yas-expand)
+              ("C-w" . backward-kill-word)
+              ("C-u" . backward-kill-sentence)
               ("C-k" . nil))
   :init
   (add-hook 'after-init-hook 'global-company-mode))

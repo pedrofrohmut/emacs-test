@@ -2,8 +2,8 @@
 (setq-default indent-tabs-mode nil)
 
 ;; Line Numbers
-;; (global-display-line-numbers-mode t)
-;; (setq-default display-line-numbers-type 'relative)
+(global-display-line-numbers-mode t)
+(setq-default display-line-numbers-type 'relative)
 
 ;; Insert closing character like ) } ]
 (electric-pair-mode t)
