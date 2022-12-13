@@ -5,7 +5,7 @@
 ;; Apperance ###################################################################
 
 (add-to-list 'default-frame-alist '(background-color . "#1a1b26"))
-(add-to-list 'default-frame-alist '(foreground-color . "#a3a3a3"))
+(add-to-list 'default-frame-alist '(foreground-color . "#d5d5d5"))
 (add-to-list 'default-frame-alist '(font . "FiraCode Nerd Font Mono 12"))
 (add-to-list 'default-frame-alist '(alpha . (90 . 90)))
 

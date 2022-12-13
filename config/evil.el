@@ -9,7 +9,6 @@
 (setq evil-cross-lines t)
 (setq evil-move-beyond-eol t)
 (setq evil-undo-system 'undo-redo)
-(setq evil-want-fine-undo t)
 (setq evil-want-keybinding nil) ; Evil collection asks for it
 
 (require 'evil)
@@ -83,11 +82,6 @@
 (define-key evil-normal-state-map (kbd "C--") 'evil-numbers/dec-at-pt)
 ;; Evil Decrease hovered number
 (define-key evil-normal-state-map (kbd "C-=") 'evil-numbers/inc-at-pt)
-
-;; Evil Goggles displays a visual hint when editing
-;; (with-eval-after-load 'evil
-;;   (require 'evil-goggles)
-;;   (evil-goggles-mode t))
 
 ;; Evil Lion Align stuff by stuff gl= gL, gl; gL(
 (with-eval-after-load 'evil

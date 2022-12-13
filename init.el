@@ -1,5 +1,10 @@
 ;; Insert spaces  instead of tabs (no \t)
 (setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
+
+;; Tab only indent on the correct position
+(setq-default tab-always-indent nil)
 
 ;; Line Numbers
 (global-display-line-numbers-mode t)
