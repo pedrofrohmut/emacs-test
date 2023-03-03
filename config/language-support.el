@@ -45,3 +45,9 @@
 (use-package haskell-mode
   :ensure t
   :defer t)
+
+;; FSharp #######################################################################
+
+(use-package fsharp-mode
+  :ensure t
+  :defer t)

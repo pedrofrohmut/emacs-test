@@ -5,7 +5,9 @@
   :ensure t
   :defer t
   :hook
-  (lsp-mode . yas-global-mode))
+  (lsp-mode . yas-global-mode)
+  :init
+  (setq yas-snippet-dirs "~/.config/emacs/snippets"))
 
 (define-key evil-insert-state-map  (kbd "C-j") 'yas-expand)
 
