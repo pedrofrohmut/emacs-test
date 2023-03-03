@@ -11,6 +11,10 @@
 (setq evil-undo-system 'undo-redo)
 (setq evil-want-keybinding nil) ; Evil collection asks for it
 
+; Download Evil
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
+
 (require 'evil)
 (add-hook 'after-init-hook 'evil-mode)
 
@@ -59,22 +63,30 @@
 ;; Evil - Must Have #############################################################
 
 ;; ;; Makes evil keys consistent in more places than just evil mode default
+(unless (package-installed-p 'evil-collection)
+  (package-install 'evil-collection))
 (with-eval-after-load 'evil
   (require 'evil-collection)
   (evil-collection-init)
   (message "evil-collection loaded"))
 
 ;; Evil Commentary gcc gc<object>
+(unless (package-installed-p 'evil-commentary)
+  (package-install 'evil-commentary))
 (with-eval-after-load 'evil
   (require 'evil-commentary)
   (evil-commentary-mode t))
 
 ;; Evil Surround (emulate tim pope)
+(unless (package-installed-p 'evil-surrond)
+  (package-install 'evil-surround))
 (with-eval-after-load 'evil
   (require 'evil-surround)
   (global-evil-surround-mode t))
 
 ;; Evil-numbers
+(unless (package-installed-p 'evil-numbers)
+  (package-install 'evil-numbers))
 (with-eval-after-load 'evil
   (require 'evil-numbers))
 
@@ -84,6 +96,8 @@
 (define-key evil-normal-state-map (kbd "C-=") 'evil-numbers/inc-at-pt)
 
 ;; Evil Lion Align stuff by stuff gl= gL, gl; gL(
+(unless (package-installed-p 'evil-lion)
+  (package-install 'evil-lion))
 (with-eval-after-load 'evil
   (require 'evil-lion)
   (evil-lion-mode t))

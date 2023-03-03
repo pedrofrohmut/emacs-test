@@ -51,3 +51,9 @@
 (use-package fsharp-mode
   :ensure t
   :defer t)
+
+;; Clojure ######################################################################
+
+(use-package clojure-mode
+  :ensure t
+  :defer t)
